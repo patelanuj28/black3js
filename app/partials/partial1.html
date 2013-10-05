@@ -1,0 +1,33 @@
+<p>
+<div ng-controller="MyCtrl1">
+	<form novalidate class="css-form" name='form' ng-submit="addPlayer()">
+	<div>
+		<label>How many players are there (2-12)? </label>
+		<input type="number" name='totalPlayers' ng-model="totalPlayers" placeholder="Enter number" required min=2 max=12 integer>
+		<font color=red>
+			<span ng-show="form.totalPlayers.$error.integer">This is not valid integer!</span>
+			<span ng-show="form.totalPlayers.$error.min || form.totalPlayers.$error.max">
+				The value must be in range 2 to 12!</span>
+		</font>
+		<br />
+		<input class="btn-primary" type="submit" value="Add Player">
+	</div>
+	<div  ng-show="number" ng-init="number>2">
+		<label>Please enter name of {{number}} player:</label>
+		<label ng-show="error" ng-init="error">{{error}}</label>
+		<input type="hidden" name='totalPlayers' value="{{number}}">
+		<div ng-repeat="j in getNumber(number)">
+			<label>Player {{$index+1}}</label>
+			<input type='text' name="player[]" required ng-model="user.name" min=2 max=50>    		
+		</div>	
+		<input class="btn-primary" type="submit" value="Start Game" >
+	</div>
+	</form>
+	<pre>
+	{{status}}
+	{{data}}
+	</pre>
+	 
+</div>
+</p>
+

@@ -1,0 +1,46 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.css-form input.ng-invalid.ng-dirty {
+background-color: #FA787E;
+}
+.css-form input.ng-valid.ng-dirty {
+background-color: #78FA89;
+}
+
+.btn-primary{
+  height:   30px;
+  
+}
+
+label{
+  color: blue;
+}

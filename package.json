@@ -1,0 +1,11 @@
+{
+  "name": "black3game",
+  "description": "A score board for kadi ni tiri game",
+  "devDependencies": {
+        "phantomjs" : "*",
+        "karma" : "*",
+        "karma-junit-reporter" : "*",    
+        "karma-jasmine" : "*",
+        "karma-ng-scenario" : "*"
+    }
+}

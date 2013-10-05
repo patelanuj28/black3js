@@ -1,0 +1,17 @@
+<p>
+<div ng-controller="Player">
+	<form novalidate class="css-form" name='form' ng-submit="startGame()">
+	<div  ng-show="number" ng-init="number>2">
+		<label>Please enter name of {{number}} player:</label>
+		<div ng-repeat="j in [1,2,3]">
+			<label>Player {{$index+1}}</label>
+			<input type='text' name="player{{$index+1}}" required ng-model="user.name" min=2 max=50>    		
+		</div>	
+		<input class="btn-primary" type="submit" value="Start Game" >
+	</div>
+
+		
+	</form>
+</div>
+</p>
+
